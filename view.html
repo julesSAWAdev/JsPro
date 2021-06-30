@@ -1,0 +1,61 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Title</th>
+        <th>Body</th> 
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+		
+	const Href = window.location.search; 
+	const urlParams = new URLSearchParams(Href);
+	const userID = urlParams.get('ID')
+	console.log(userID);
+
+	async function getPosts(userid){
+		const APIurl = 'https://jsonplaceholder.typicode.com/posts';
+		const response = await fetch(APIurl);
+			const data = await response.json();
+			console.log(data);
+	buildTable(data)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			if (data[i].userId == userID) {
+				var row = `<tr>
+							<td>${data[i].title}</td>
+							<td>${data[i].body}</td>
+							 
+							 
+					  </tr>`
+			table.innerHTML += row
+			}
+			
+
+
+		}
+		}
+	}
+
+	getPosts(userID);
+
+</script>
