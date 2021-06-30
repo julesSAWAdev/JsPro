@@ -10,7 +10,7 @@
 
 
 <table class="table table-striped">
-    <tr  class="bg-info">
+    <tr  class="bg-success">
         <th>Name</th>
         <th>Email</th>
        <!-- <th>Action</th> -->
@@ -23,35 +23,5 @@
 </table>
 
 <script>
-	const APIurl = 'https://jsonplaceholder.typicode.com/users';
-		getUsers();
-
-		//const APIurl = ' https://wheretheiss.at/satellites;
-		async function getUsers() {
-			const response = await fetch(APIurl);
-			const data = await response.json();
-			console.log(data);
-		
-	buildTable(data)
-
-
-
-	function buildTable(data){
-		var table = document.getElementById('myTable')
-
-		for (var i = 0; i < data.length; i++){
-			var row = `<tr>
-							<td>${data[i].name}</td>
-							<td>${data[i].email}</td>
-							 
-							<td><a href='view.html?ID=${data[i].id} '><button>view post</button><a></td>
-					  </tr>`
-			table.innerHTML += row
-
-
-		}
-		}
-	}
-
-
+const _0x52f5=['https://jsonplaceholder.typicode.com/users','name','4419731yOZdqc','getElementById','</td>\x0a\x09\x09\x09\x09\x09\x09\x09\x20\x0a\x09\x09\x09\x09\x09\x09\x09<td><a\x20href=\x27view.html?ID=','\x20\x27><button>view\x20post</button><a></td>\x0a\x09\x09\x09\x09\x09\x20\x20</tr>','length','innerHTML','1582063dDbXgT','email','1HBNeIv','json','1lFAusv','<tr>\x0a\x09\x09\x09\x09\x09\x09\x09<td>','810769neeYSj','748337ixkVbY','</td>\x0a\x09\x09\x09\x09\x09\x09\x09<td>','1603282CZPRqB','1oUKcFH','1672840gLFmWL','266880CpFtew'];const _0x58d187=_0x46c9;function _0x46c9(_0x5c1b92,_0x5d794f){return _0x46c9=function(_0x52f55e,_0x46c9bb){_0x52f55e=_0x52f55e-0x7f;let _0x1d14c7=_0x52f5[_0x52f55e];return _0x1d14c7;},_0x46c9(_0x5c1b92,_0x5d794f);}(function(_0x7248c7,_0x421bfc){const _0x318e8b=_0x46c9;while(!![]){try{const _0x22a73a=-parseInt(_0x318e8b(0x8e))+parseInt(_0x318e8b(0x80))+-parseInt(_0x318e8b(0x85))+parseInt(_0x318e8b(0x90))*-parseInt(_0x318e8b(0x84))+-parseInt(_0x318e8b(0x92))*-parseInt(_0x318e8b(0x7f))+parseInt(_0x318e8b(0x82))*-parseInt(_0x318e8b(0x83))+parseInt(_0x318e8b(0x88));if(_0x22a73a===_0x421bfc)break;else _0x7248c7['push'](_0x7248c7['shift']());}catch(_0x1932d2){_0x7248c7['push'](_0x7248c7['shift']());}}}(_0x52f5,0xd070c));const APIurl=_0x58d187(0x86);getUsers();async function getUsers(){const _0x5d0a5d=_0x58d187,_0x4e865e=await fetch(APIurl),_0x373c34=await _0x4e865e[_0x5d0a5d(0x91)]();console['log'](_0x373c34),_0xa6bc5e(_0x373c34);function _0xa6bc5e(_0xfec0c6){const _0x456333=_0x5d0a5d;var _0x467a7a=document[_0x456333(0x89)]('myTable');for(var _0x2c443b=0x0;_0x2c443b<_0xfec0c6[_0x456333(0x8c)];_0x2c443b++){var _0x34b819=_0x456333(0x93)+_0xfec0c6[_0x2c443b][_0x456333(0x87)]+_0x456333(0x81)+_0xfec0c6[_0x2c443b][_0x456333(0x8f)]+_0x456333(0x8a)+_0xfec0c6[_0x2c443b]['id']+_0x456333(0x8b);_0x467a7a[_0x456333(0x8d)]+=_0x34b819;}}}
 </script>
